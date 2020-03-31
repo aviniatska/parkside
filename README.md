@@ -1,24 +1,31 @@
-# README
+# Parkside test assignment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Problem
+Starting with Wikipedia's [page](https://en.wikipedia.org/wiki/Metis_(mythology)), please test for the following:
 
-Things you may want to cover:
+* the headings listed in the `Contents` box are used as headings on the page
 
-* Ruby version
+* the headings listed in the `Contents` box have functioning hyperlinks
 
-* System dependencies
+* in the _Personified concepts_, `Nike` has a popup that contains the following text: _In ancient Greek religion, Nike was a goddess who personified victory. Her Roman equivalent was Victoria_
 
-* Configuration
+* in the _Personified concepts_, if you click on `Nike`, it takes you to a page that displays a family tree
 
-* Database creation
+## Solution
 
-* Database initialization
+* create basic Rails app
 
-* How to run the test suite
+* setup test env (`Gemfile, group: test`)
+  * capybara
+  * selenium-webdriver
+  * webdrivers
+  * site_prism
+  * rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+* webdriver `chromedriver`
 
-* Deployment instructions
+* test infrastructure located in `spec` directory
 
-* ...
+* path to test file `spec/features/wikipedia_page_spec.rb`
+
+* run test `rspec spec/features/wikipedia_page_spec.rb`
